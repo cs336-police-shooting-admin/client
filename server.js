@@ -50,7 +50,18 @@ app.post('/api/comments', function(req, res) {
         var newComment = {
             id: Date.now(),
             author: req.body.author,
-            text: req.body.text,
+            date: req.body.date,
+            manner_of_death: req.body.manner_of_death,
+            armed: req.body.armed,
+            age: req.body.age,
+            gender: req.body.gender,
+            race: req.body.race,
+            city: req.body.city,
+            state: req.body.state,
+            signs_of_mental_illness: req.body.signs_of_mental_illness,
+            threat_level: req.body.threat_level,
+            flee: req.body.flee,
+            body_camera: req.body.body_camera
         };
         db.collection("data").insertOne(newComment, function(err, result) {
         if (err) throw err;
