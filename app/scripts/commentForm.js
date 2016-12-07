@@ -4,49 +4,49 @@ import $ from 'jquery';
 
 module.exports = React.createClass({
   getInitialState: function() {
-    return {author: '', text: ''};
+    return {author: '', date: '', manner_of_death: '', armed: '',
+          age: '', gender: '', race: '', city: '', state: '', 
+          signs_of_mental_illness: '', threat_level: '', flee: '', 
+          body_camera: ''};
   },
   handleAuthorChange: function(e) {
     this.setState({author: e.target.value});
   },
   handleDateChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({date: e.target.value});
   },
   handleMannerOfDeathChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({manner_of_death: e.target.value});
   },
   handleArmedChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({armed: e.target.value});
   },
   handleAgeChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  handleAgeChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({age: e.target.value});
   },
   handleGenderChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({gender: e.target.value});
   },
   handleRaceChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({race: e.target.value});
   },
   handleCityChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({city: e.target.value});
   },
   handleStateChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({state: e.target.value});
   },
   handleSignsOfMentalIllnessChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({signs_of_mental_illness: e.target.value});
   },
   handleThreatLevelChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({threat_level: e.target.value});
   },
   handleFleeChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({flee: e.target.value});
   },
   handleBodyCameraChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({body_camera: e.target.value});
   },
   handleSubmit: function(e) {
     e.preventDefault();
@@ -102,7 +102,7 @@ module.exports = React.createClass({
           type="text"
           placeholder="armed"
           value={this.state.armed}
-          onChange={this.handleArmChange}
+          onChange={this.handleArmedChange}
         />
         <input
           type="text"
@@ -138,7 +138,7 @@ module.exports = React.createClass({
           type="text"
           placeholder="mental illness - boolean"
           value={this.state.signs_of_mental_illness}
-          onChange={this.handleSignsOfMentalIlnessChange}
+          onChange={this.handleSignsOfMentalIllnessChange}
         />
         <input
           type="text"
