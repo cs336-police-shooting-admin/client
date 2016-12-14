@@ -24,12 +24,14 @@ code {
     font-size: 12px;
     margin: 0 2px;
     padding: 0 5px;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
     font-weight: bold;
     margin: 0 0 15px;
     padding: 0;
+    text-align: center;
 }
 
 h1 {
@@ -56,5 +58,13 @@ p, ul {
 
 ul {
     padding-left: 30px;
+}
+
+.commentList:nth-child(odd) {
+    background: grey;
+}
+
+#commentForm {
+    text-align: left;
 }
 

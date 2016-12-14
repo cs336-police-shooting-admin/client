@@ -114,7 +114,7 @@ module.exports = React.createClass({
     },
     render: function() {
         return (
-            <div>
+            <div class="editForm">
                 <form className="commentForm">
                     <h1>Edit incident of: {this.state.name}</h1>
                     <p>{this.state.name} was killed on {this.state.date}. The victim was {this.state.manner_of_death} by police. The victim was armed with a {this.state.armed}.</p>
