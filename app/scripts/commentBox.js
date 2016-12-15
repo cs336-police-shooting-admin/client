@@ -48,13 +48,18 @@ module.exports = React.createClass({
     return {data: []};
   },
   componentDidMount: function() {
-    this.loadCommentsFromServer();
+    this.loadCommentsFromServer()
     setInterval(this.loadCommentsFromServer, POLL_INTERVAL);
   },
   render: function() {
     return (
       <div className="commentBox">
-        <h1>Victims</h1>
+      <Image>
+          source={require('./css/caution.png')}
+          style={{width:50, height: 50}}
+        </Image>
+        <h1>This website shows all fatal police shootings according to the Washington Post Database</h1>
+        <h2>The following names are the victims:</h2>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
       </div>
