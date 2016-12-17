@@ -54,12 +54,9 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="commentBox">
-      <Image>
-          source={require('./css/caution.png')}
-          style={{width:50, height: 50}}
-        </Image>
         <h1>This website shows all fatal police shootings according to the Washington Post Database</h1>
-        <h2>The following names are the victims:</h2>
+        <p> </p>
+        <h2 className="listh2">The following names are the victims:</h2>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
       </div>

@@ -116,99 +116,115 @@ module.exports = React.createClass({
         return (
             <div class="editForm">
                 <form className="commentForm">
-                    <h1>Edit incident of: {this.state.name}</h1>
+                    <h1>Incident of {this.state.name}</h1>
                     <p>{this.state.name} was killed on {this.state.date}. The victim was {this.state.manner_of_death} by police. The victim was armed with a {this.state.armed}.</p>
                     <p>The victim was {this.state.age}. The victim gender was {this.state.gender}. The victims ethnicity was {this.state.race}. This took place in {this.state.city} {this.state.state}. </p>
                     <p>Was there signs of mental illness: {this.state.signs_of_mental_illness}. What was the victim's threat level: {this.state.threat_level}. </p>
                     <p>Was the victim fleeing: {this.state.flee}. Did the Officer's responding have body cameras: {this.state.body_camera}.</p>
                 </form>
+                <h2>Edit incident of {this.state.name}</h2>
                     <form className="commentForm" onSubmit={this.handleSubmit}>
+                    <p><strong>Enter ID: </strong></p>
         <input
           type="text"
           placeholder="ID"
           value={this.state.id}
           onChange={this.handleIdChange}
         />
+        <p><strong>Enter name: </strong></p>
         <input
           type="text"
           placeholder="name"
           value={this.state.name}
           onChange={this.handleNameChange}
         />
+        <p><strong>Enter date: </strong></p>
         <input
           type="text"
           placeholder="date - yyyy/mm/dd"
           value={this.state.date}
           onChange={this.handleDateChange}
         />
+        <p><strong>Enter the manner of death: </strong></p>
         <input
           type="text"
           placeholder="manner of death"
           value={this.state.manner_of_death}
           onChange={this.handleMannerOfDeathChange}
         />
+        <p><strong>Enter whether the victim was armed or not: </strong></p>
         <input
           type="text"
           placeholder="armed"
           value={this.state.armed}
           onChange={this.handleArmedChange}
         />
+        <p><strong>Enter age: </strong></p>
         <input
           type="text"
           placeholder="Set age"
           value={this.state.age}
           onChange={this.handleAgeChange}
         />
+        <p><strong>Enter gender: </strong></p>
         <input
           type="text"
           placeholder="Set gender"
           value={this.state.gender}
           onChange={this.handleGenderChange}
         />
+        <p><strong>Enter race: </strong></p>
         <input
           type="text"
           placeholder="Set race"
           value={this.state.race}
           onChange={this.handleRaceChange}
         />
+        <p><strong>Enter city: </strong></p>
         <input
           type="text"
           placeholder="Set city"
           value={this.state.city}
           onChange={this.handleCityChange}
         />
+        <p><strong>Enter state: </strong></p>
         <input
           type="text"
           placeholder="Set state"
           value={this.state.state}
           onChange={this.handleStateChange}
         />
+        <p><strong>Enter mental illness: </strong></p>
         <input
           type="text"
           placeholder="mental illness - boolean"
           value={this.state.signs_of_mental_illness}
           onChange={this.handleSignsOfMentalIllnessChange}
         />
+        <p><strong>Enter threat level: </strong></p>
         <input
           type="text"
           placeholder="threat level"
           value={this.state.threat_level}
           onChange={this.handleThreatLevelChange}
         />
+        <p><strong>Enter if victim was fleeing: </strong></p>
         <input
           type="text"
           placeholder="Set flee"
           value={this.state.flee}
           onChange={this.handleFleeChange}
         />
+        <p><strong>Enter if there was a body camera: </strong></p>
         <input
           type="text"
           placeholder="body camera - boolean"
           value={this.state.body_camera}
           onChange={this.handleBodyCameraChange}
         />
-        <button type="button" onClick={this.handleUpdate}>Update</button>
-        <button type="button" onClick={this.handleDelete}>Delete</button>
+        <p> </p>
+        <button type="button" onClick={this.handleUpdate}>Update Incident</button>
+        <button type="button" onClick={this.handleDelete}>Delete Incident</button>
       </form>
       <Link to='/'>Back</Link>
     </div>

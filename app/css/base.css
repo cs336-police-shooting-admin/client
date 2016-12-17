@@ -6,8 +6,8 @@ body {
     line-height: 1.7;
     margin: 0;
     padding: 30px;
-    border-left: 150px solid #840913;
-    border-right:150px solid #840913;
+    border-left: 160px solid #840913;
+    border-right:160px solid #840913;
     border-width: 200px;
     text-align: center;
 }
@@ -65,11 +65,10 @@ ul {
     padding-left: 30px;
 }
 
-.commentList:nth-child(odd) {
+div.commentList:nth-child(odd) {
     background: grey;
 }
 
-#commentForm {
-    text-align: left;
+h2.listh2 {
+    color: #4c4754;
 }
-
