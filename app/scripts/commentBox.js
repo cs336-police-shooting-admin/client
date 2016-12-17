@@ -6,8 +6,11 @@ import CommentForm from './commentForm';
 import CommentList from './commentList';
 import { API_URL, POLL_INTERVAL } from './global';
 module.exports = React.createClass({
-  getInitialState: function(){
-    return {data: []};
+  getInitialState: function() {
+    return {
+      data: [],
+      hover_flag: false
+    };
   },
   loadCommentsFromServer: function() {
     $.ajax({
@@ -44,8 +47,8 @@ module.exports = React.createClass({
       }.bind(this)
     });
   },
-  getInitialState: function() {
-    return {data: []};
+  hoverEvent: function() {
+        this.setState({hover_flag: !this.state.hover_flag});
   },
   componentDidMount: function() {
     this.loadCommentsFromServer()
