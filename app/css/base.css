@@ -1,10 +1,15 @@
 body {
     background: #fff;
+    border-color: transparent;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.7;
     margin: 0;
     padding: 30px;
+    border-left: 160px solid #840913;
+    border-right:160px solid #840913;
+    border-width: 200px;
+    text-align: center;
 }
 
 a {
@@ -24,12 +29,14 @@ code {
     font-size: 12px;
     margin: 0 2px;
     padding: 0 5px;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
     font-weight: bold;
     margin: 0 0 15px;
     padding: 0;
+    text-align: center;
 }
 
 h1 {
@@ -58,3 +65,10 @@ ul {
     padding-left: 30px;
 }
 
+div.commentList:nth-child(odd) {
+    background: grey;
+}
+
+h2.listh2 {
+    color: #4c4754;
+}

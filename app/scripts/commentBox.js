@@ -6,8 +6,11 @@ import CommentForm from './commentForm';
 import CommentList from './commentList';
 import { API_URL, POLL_INTERVAL } from './global';
 module.exports = React.createClass({
-  getInitialState: function(){
-    return {data: []};
+  getInitialState: function() {
+    return {
+      data: [],
+      // hover_flag: false
+    };
   },
   loadCommentsFromServer: function() {
     $.ajax({
@@ -44,17 +47,19 @@ module.exports = React.createClass({
       }.bind(this)
     });
   },
-  getInitialState: function() {
-    return {data: []};
+  hoverEvent: function() {
+        this.setState({hover_flag: !this.state.hover_flag});
   },
   componentDidMount: function() {
-    this.loadCommentsFromServer();
+    this.loadCommentsFromServer()
     setInterval(this.loadCommentsFromServer, POLL_INTERVAL);
   },
   render: function() {
     return (
       <div className="commentBox">
-        <h1>Victims</h1>
+        <h1>This website shows all fatal police shootings according to the Washington Post Database</h1>
+        <p> </p>
+        <h2 className="listh2">The following names are the victims:</h2>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
       </div>
