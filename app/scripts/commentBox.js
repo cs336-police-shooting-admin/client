@@ -9,7 +9,7 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       data: [],
-      hover_flag: false
+      // hover_flag: false
     };
   },
   loadCommentsFromServer: function() {
